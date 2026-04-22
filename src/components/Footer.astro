@@ -5,14 +5,17 @@ const year = new Date().getFullYear();
 <footer class="mt-24 border-t border-forest-700/10 bg-cream-50">
   <div class="container-wide py-16">
     <div class="grid gap-12 md:grid-cols-12">
-      <div class="md:col-span-5">
+      <div class="md:col-span-4">
         <div class="font-display text-lg text-forest-700">Now City Labs</div>
         <p class="mt-3 max-w-sm text-sm leading-relaxed text-stone-600">
           Regenerative development intelligence. From feasibility to funded — faster.
         </p>
+        <p class="mt-6 text-xs leading-relaxed text-stone-500">
+          The development services and intelligence arm of Now City Inc.
+        </p>
       </div>
 
-      <nav class="md:col-span-3">
+      <nav class="md:col-span-2">
         <div class="eyebrow mb-3">Capabilities</div>
         <ul class="space-y-2 text-sm">
           <li><a href="/stack/" class="text-stone-700 no-underline hover:text-forest-700">The Stack</a></li>
@@ -22,17 +25,31 @@ const year = new Date().getFullYear();
         </ul>
       </nav>
 
-      <div class="md:col-span-4">
+      <div class="md:col-span-3">
+        <div class="eyebrow mb-3">Across the platform</div>
+        <ul class="space-y-3 text-sm">
+          <li>
+            <a href="https://nowcity.co" rel="noopener" class="text-stone-700 no-underline hover:text-forest-700">
+              nowcity.co
+            </a>
+            <div class="text-xs text-stone-500">Neighborhood vision &amp; lived experience</div>
+          </li>
+          <li>
+            <a href="https://urbanreboot.org" rel="noopener" class="text-stone-700 no-underline hover:text-forest-700">
+              urbanreboot.org
+            </a>
+            <div class="text-xs text-stone-500">Mission-aligned feasibility &amp; planning</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
         <div class="eyebrow mb-3">Connect</div>
         <p class="text-sm leading-relaxed text-stone-700">
           <a href="mailto:hello@nowcitylabs.com" class="no-underline hover:text-forest-700">hello@nowcitylabs.com</a>
         </p>
         <p class="mt-1 text-sm leading-relaxed text-stone-700">
           Santa Cruz, CA · Pacific Northwest
-        </p>
-        <p class="mt-6 text-xs leading-relaxed text-stone-500">
-          Now City Labs is the development services and intelligence arm of Now City Inc.
-          Same world. Different door.
         </p>
       </div>
     </div>
@@ -41,9 +58,6 @@ const year = new Date().getFullYear();
       <div>© {year} Now City Inc. All rights reserved.</div>
       <div class="flex gap-6">
         <a href="/privacy/" class="text-stone-500 no-underline hover:text-forest-700">Privacy</a>
-        <a href="https://nowcity.co" class="text-stone-500 no-underline hover:text-forest-700" rel="noopener">
-          nowcity.co
-        </a>
       </div>
     </div>
   </div>
