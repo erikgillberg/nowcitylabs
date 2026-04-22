@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const capabilities = [
+  {
+    eyebrow: 'Layer 01',
+    title: 'Intelligence',
+    subtitle: 'AI-powered pre-development',
+    blurb:
+      'Feasibility, zoning, scenario modeling, and carrying-capacity analysis — before design begins. We answer what the land will actually support before anyone draws a building.',
+    lines: [
+      'Site feasibility and scenario modeling',
+      'Zoning, entitlement, and compliance intelligence',
+      'Grid, energy, and water carrying capacity',
+      'Circular materials tracking and embodied-carbon modeling',
+    ],
+  },
+  {
+    eyebrow: 'Layer 02',
+    title: 'Systems',
+    subtitle: 'Integrated development methodology',
+    blurb:
+      'The Now City Stack — a repeatable four-phase engagement framework that aligns land, systems, and program before the pro-forma locks in.',
+    lines: [
+      'Carrying Capacity & Opportunity Discovery',
+      'Systems & Program Synergy Design',
+      'Pro-Forma & Capital Structuring',
+      'Development Execution & Stewardship',
+    ],
+  },
+  {
+    eyebrow: 'Layer 03',
+    title: 'Services',
+    subtitle: 'Advisory, co-development, and activation',
+    blurb:
+      'We operate lean in early stages and bring the right partners in for the right moment — from entitlements through activation and long-term stewardship.',
+    lines: [
+      'Owner representation and strategic advisory',
+      'Co-GP and mission-aligned JV structuring',
+      'Mixed-use activation and ground-floor programming',
+      'Municipal partnership and public-private facilitation',
+    ],
+  },
+  {
+    eyebrow: 'Layer 04',
+    title: 'Capital',
+    subtitle: 'Innovative finance structuring',
+    blurb:
+      'We structure public tools, philanthropy, impact capital, and institutional equity into stacks that actually close — and perform over decades.',
+    lines: [
+      'Blended-finance capital-stack design',
+      'Impact and institutional capital alignment',
+      'LIHTC, MFTE, and public-subsidy navigation',
+      'Urban Reboot Fund co-investment facilitation',
+    ],
+  },
+];
+---
+
+<Layout title="The Stack" description="Four integrated layers of capability — Intelligence, Systems, Services, Capital — applied to the challenge of getting regenerative projects built.">
+  <section class="pt-20 pb-12 md:pt-28">
+    <div class="container-wide">
+      <div class="max-w-3xl">
+        <div class="eyebrow mb-6">The Now City Stack</div>
+        <h1 class="text-display-xl font-display text-forest-700">
+          Four layers. One coordinated system.
+        </h1>
+        <p class="lede mt-8 text-stone-700">
+          Most projects don't struggle because the ideas are flawed. They
+          struggle because the systems needed to support them aren't
+          aligned or sequenced. The Stack solves that.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-24">
+    <div class="container-wide">
+      <div class="grid gap-6 md:grid-cols-2">
+        {capabilities.map((c) => (
+          <article class="rounded-2xl border border-forest-700/10 bg-cream-50 p-8 md:p-10">
+            <div class="flex items-baseline justify-between">
+              <div class="eyebrow">{c.eyebrow}</div>
+              <div class="rule-thin"></div>
+            </div>
+            <h2 class="mt-6 font-display text-3xl text-forest-700">{c.title}</h2>
+            <div class="mt-1 font-sans text-sm text-stone-600">{c.subtitle}</div>
+            <p class="prose-body mt-5">{c.blurb}</p>
+            <ul class="mt-6 space-y-2">
+              {c.lines.map((line) => (
+                <li class="flex gap-3 text-sm text-stone-700">
+                  <span class="mt-2 h-[3px] w-3 flex-shrink-0 bg-copper-400"></span>
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-forest-700/10 bg-forest-700 py-20 text-cream">
+    <div class="container-wide">
+      <div class="grid gap-12 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <div class="eyebrow mb-4 text-copper-200">Tech strategy</div>
+          <h2 class="text-display-md font-display text-cream">Right tech. Right time.</h2>
+        </div>
+        <div class="md:col-span-7">
+          <p class="text-lg leading-relaxed text-cream/85">
+            We are outcome-driven and tech-agnostic. Many projects pick
+            technology too early, too late, or under vendor pressure — and
+            end up with systems no one uses, tools that don't integrate,
+            and operations that fail after handover.
+          </p>
+          <p class="mt-5 text-lg leading-relaxed text-cream/85">
+            We do the opposite. Technology decisions come only after the
+            program, systems logic, and operating model are clear.
+          </p>
+          <ul class="mt-8 grid gap-4 sm:grid-cols-2">
+            <li class="border-l-2 border-copper-400 pl-4 text-cream/85">
+              <div class="font-display text-cream">Operating model first</div>
+              <div class="text-sm text-cream/70">What the place must enable.</div>
+            </li>
+            <li class="border-l-2 border-copper-400 pl-4 text-cream/85">
+              <div class="font-display text-cream">Interoperable</div>
+              <div class="text-sm text-cream/70">Systems must speak to each other.</div>
+            </li>
+            <li class="border-l-2 border-copper-400 pl-4 text-cream/85">
+              <div class="font-display text-cream">Pilot before scale</div>
+              <div class="text-sm text-cream/70">One block before district rollout.</div>
+            </li>
+            <li class="border-l-2 border-copper-400 pl-4 text-cream/85">
+              <div class="font-display text-cream">Built for handover</div>
+              <div class="text-sm text-cream/70">No black-box systems.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="container-narrow text-center">
+      <h2 class="text-display-lg font-display text-forest-700">
+        Coordinated capability, applied to a specific site.
+      </h2>
+      <p class="prose-body mx-auto mt-6 max-w-xl">
+        The Stack only matters when it's grounded in a real project. Let's
+        talk about yours.
+      </p>
+      <div class="mt-10">
+        <a href="/services/#contact" class="btn-primary">Schedule a gateway call</a>
+      </div>
+    </div>
+  </section>
+</Layout>

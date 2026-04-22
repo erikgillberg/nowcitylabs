@@ -1,0 +1,35 @@
+---
+const currentPath = Astro.url.pathname;
+
+const nav = [
+  { href: '/stack/', label: 'The Stack' },
+  { href: '/services/', label: 'Services' },
+  { href: '/outcomes/', label: 'Outcomes' },
+  { href: '/partners/', label: 'Partners' },
+];
+
+const isActive = (href: string) => currentPath === href || currentPath.startsWith(href);
+---
+
+<header class="sticky top-0 z-40 border-b border-forest-700/10 bg-cream/85 backdrop-blur">
+  <div class="container-wide flex h-16 items-center justify-between">
+    <a href="/" class="font-display text-lg tracking-tight text-forest-700 no-underline">
+      Now City <span class="text-copper-400">Labs</span>
+    </a>
+    <nav class="hidden items-center gap-8 md:flex">
+      {nav.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'text-sm no-underline transition-colors',
+            isActive(item.href) ? 'text-forest-700' : 'text-stone-600 hover:text-forest-700',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a href="/services/#contact" class="btn-primary text-sm">Schedule a call</a>
+    </nav>
+    <a href="/services/#contact" class="btn-primary text-sm md:hidden">Contact</a>
+  </div>
+</header>

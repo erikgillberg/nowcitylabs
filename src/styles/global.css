@@ -1,0 +1,100 @@
+/* ---------- Fonts ---------- */
+/* Inter for body + Playfair Display as Canela fallback per Brand Bible */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Base ---------- */
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-cream text-forest-800 font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
+  }
+
+  ::selection {
+    @apply bg-copper/30 text-forest-800;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-forest-700;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    @apply text-forest-700 underline-offset-4 transition-colors;
+    text-decoration-thickness: 1px;
+  }
+
+  a:hover {
+    @apply text-copper-400;
+  }
+}
+
+/* ---------- Components ---------- */
+@layer components {
+  .container-prose {
+    @apply mx-auto max-w-4xl px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply mx-auto max-w-6xl px-6 lg:px-8;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-3xl px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium no-underline transition-all;
+    letter-spacing: 0.02em;
+  }
+
+  .btn-primary {
+    @apply btn bg-forest-700 text-cream hover:bg-forest-600;
+  }
+
+  .btn-primary:hover {
+    @apply text-cream;
+  }
+
+  .btn-outline {
+    @apply btn border border-forest-700 bg-transparent text-forest-700 hover:bg-forest-700 hover:text-cream;
+  }
+
+  .eyebrow {
+    @apply font-sans text-xs font-medium uppercase tracking-[0.18em] text-copper-400;
+  }
+
+  .lede {
+    @apply font-display text-xl leading-relaxed text-forest-800 md:text-2xl;
+    text-wrap: balance;
+  }
+
+  .prose-body {
+    @apply font-sans text-base leading-relaxed text-stone-700 md:text-lg;
+  }
+
+  .prose-body p + p {
+    @apply mt-5;
+  }
+
+  .rule-thin {
+    @apply h-px w-12 bg-forest-700/40;
+  }
+}

@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const ecosystem = [
+  {
+    eyebrow: 'Landowners',
+    title: 'Family holdings, institutional campuses, public land',
+    blurb:
+      'We partner with stewards of land who want to create enduring value — not maximize a single transaction.',
+  },
+  {
+    eyebrow: 'Regional operators',
+    title: 'West Coast multifamily and mixed-use developers',
+    blurb:
+      'We pair our pre-development and capital intelligence with best-in-class regional execution teams. Operators keep their shingle. We de-risk the upstream work.',
+  },
+  {
+    eyebrow: 'Municipalities',
+    title: 'Cities and agencies across the West Coast',
+    blurb:
+      'We work alongside planning staff, economic-development offices, and elected leadership to align housing production with community outcomes and durable tax base.',
+  },
+  {
+    eyebrow: 'Mission-aligned capital',
+    title: 'Impact funds, CDFIs, institutional LPs',
+    blurb:
+      'We structure capital stacks that align patient equity, mission-aligned debt, and institutional dry powder around projects that underwrite on their own merits.',
+  },
+  {
+    eyebrow: 'AEC network',
+    title: 'Architects, engineers, landscape, construction',
+    blurb:
+      'A curated network of civil and ecological engineers, architecture and landscape studios, and construction partners — brought in at the right moment, not carried as overhead.',
+  },
+  {
+    eyebrow: 'Non-profit & philanthropic',
+    title: 'Urban Reboot and aligned intermediaries',
+    blurb:
+      'Philanthropic capital can de-risk the earliest pre-development work for mission-aligned projects — where traditional capital can\'t show up yet.',
+  },
+];
+---
+
+<Layout title="Partners" description="How Now City Labs works within a broader ecosystem of landowners, operators, municipalities, capital, and AEC partners.">
+  <section class="pt-20 pb-16 md:pt-28">
+    <div class="container-wide">
+      <div class="max-w-3xl">
+        <div class="eyebrow mb-6">Partners</div>
+        <h1 class="text-display-xl font-display text-forest-700">
+          Asset-lite by design. Connected by choice.
+        </h1>
+        <p class="lede mt-8 text-stone-700">
+          We compete on intelligence and values — not balance sheet. The
+          Stack reaches scale through an ecosystem of aligned partners
+          who do what they do best.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-24">
+    <div class="container-wide">
+      <div class="grid gap-6 md:grid-cols-2">
+        {ecosystem.map((e) => (
+          <article class="rounded-2xl border border-forest-700/10 bg-cream-50 p-8">
+            <div class="eyebrow mb-3">{e.eyebrow}</div>
+            <h2 class="font-display text-xl leading-tight text-forest-700">{e.title}</h2>
+            <p class="prose-body mt-4">{e.blurb}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Positioning -->
+  <section class="border-y border-forest-700/10 bg-forest-700 py-20 text-cream">
+    <div class="container-wide grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <div class="eyebrow mb-4 text-copper-200">How we position</div>
+        <h2 class="text-display-md font-display text-cream">Four wedges. One discipline.</h2>
+      </div>
+      <div class="md:col-span-7 space-y-6 text-cream/85">
+        <div>
+          <div class="font-display text-lg text-cream">Pre-development advisory</div>
+          <div class="text-cream/75">
+            AI-powered carrying-capacity discovery, feasibility, and capital-structure intelligence.
+          </div>
+        </div>
+        <div>
+          <div class="font-display text-lg text-cream">Mission co-GP</div>
+          <div class="text-cream/75">
+            Co-developer and co-GP on aligned projects with regional operators and patient capital.
+          </div>
+        </div>
+        <div>
+          <div class="font-display text-lg text-cream">Mixed-use activation</div>
+          <div class="text-cream/75">
+            Ground-floor programming, small-business curation, and local-economy strategy.
+          </div>
+        </div>
+        <div>
+          <div class="font-display text-lg text-cream">PNW municipality partner</div>
+          <div class="text-cream/75">
+            Deep Pacific Northwest focus — working alongside cities to unlock mission-aligned mixed-use housing.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="container-narrow text-center">
+      <h2 class="text-display-lg font-display text-forest-700">
+        Same world. Different door.
+      </h2>
+      <p class="prose-body mx-auto mt-6 max-w-xl">
+        Now City Labs is the development services and intelligence expression
+        of the Now City platform. Where
+        <a href="https://nowcity.co" rel="noopener" class="text-forest-700 underline decoration-copper-400 decoration-2 underline-offset-4 hover:text-copper-400">nowcity.co</a>
+        speaks to neighborhood vision and lived experience,
+        nowcitylabs.com speaks to capability, rigor, and ROI.
+      </p>
+    </div>
+  </section>
+</Layout>

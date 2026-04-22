@@ -1,0 +1,215 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const phases = [
+  {
+    number: '01',
+    title: 'Carrying Capacity & Opportunity Discovery',
+    output: 'Carrying Capacity Map & Opportunity Framework',
+    value: 'Reduces speculative risk. Clarifies realistic and compelling development paths before significant capital is at risk.',
+    fee: 'Fixed discovery fee',
+    blurb:
+      'We assess land, water, energy, ecology, utilities, mobility, and cultural context to understand what the site actually supports — its real potential and real limitations.',
+  },
+  {
+    number: '02',
+    title: 'Systems & Program Synergy Design',
+    output: 'Systems-aligned development program — buildings, public realm, amenities, flows',
+    value: 'Lower capital and operating costs, stronger identity, and smoother entitlements because the physical and operational systems reinforce each other from day one.',
+    fee: 'Fixed + milestone fees',
+    blurb:
+      'We design the physical and operational systems so uses reinforce one another — reducing waste and unlocking shared value across the program.',
+  },
+  {
+    number: '03',
+    title: 'Pro-Forma & Capital Structuring',
+    output: 'Multi-scenario pro-forma + capital-stack strategy',
+    value: 'Financial feasibility that matches real-world conditions and long-horizon returns — not pro-formas built to justify an already-chosen plan.',
+    fee: 'Fixed + success fee',
+    blurb:
+      'We model pro-formas based on the systems-aligned program — not the other way around. And we structure capital to match the actual shape of the project.',
+  },
+  {
+    number: '04',
+    title: 'Development Execution & Stewardship',
+    output: 'Entitlements, contracting, construction oversight, leasing, activation, stewardship',
+    value: 'Faster delivery, fewer surprises, protected identity, and durable long-term asset value.',
+    fee: 'Development management fee or GP participation',
+    blurb:
+      'We can serve as your development manager or co-developer — delivering the project and maintaining integrity over time.',
+  },
+];
+---
+
+<Layout title="Services" description="Strategic advisory and owner representation for large-scale sites. A four-phase engagement framework — from carrying-capacity discovery through stewardship.">
+  <section class="pt-20 pb-16 md:pt-28">
+    <div class="container-wide">
+      <div class="max-w-3xl">
+        <div class="eyebrow mb-6">Services</div>
+        <h1 class="text-display-xl font-display text-forest-700">
+          Strategic advisory for large-scale sites.
+        </h1>
+        <p class="lede mt-8 text-stone-700">
+          We guide landholders through visioning, feasibility, planning,
+          capital structure, and delivery — creating value that lasts.
+        </p>
+        <div class="mt-10">
+          <a href="#contact" class="btn-primary">Schedule a gateway call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why traditional falls short -->
+  <section class="border-y border-forest-700/10 bg-cream-50 py-20">
+    <div class="container-wide grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <div class="eyebrow mb-4">The problem we solve</div>
+        <h2 class="text-display-md font-display text-forest-700">
+          The traditional process is the risk.
+        </h2>
+      </div>
+      <div class="md:col-span-7">
+        <p class="prose-body">
+          Most development follows a familiar pattern: set a density or
+          revenue target, draw a design to match, then spend years
+          fighting entitlements, redesign, engineering rework, and
+          community pushback. Distinctiveness gets value-engineered out.
+        </p>
+        <p class="prose-body mt-5">
+          That's why so many projects overrun budgets, stall in entitlements,
+          lose their identity in value engineering, and underperform in
+          absorption and resale. The traditional process is itself the
+          source of risk, cost, and delay.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- We flip the order -->
+  <section class="py-20">
+    <div class="container-wide">
+      <div class="mb-12">
+        <div class="eyebrow mb-4">A better way</div>
+        <h2 class="text-display-md font-display text-forest-700">Start with the land and the systems.</h2>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="rounded-2xl border border-stone-300 bg-white p-8">
+          <div class="eyebrow mb-4 text-stone-500">Traditional</div>
+          <ul class="space-y-3 text-stone-600">
+            <li>Pro-forma determines the plan</li>
+            <li>Utilities and infrastructure sized independently</li>
+            <li>Community and agency engagement comes late</li>
+            <li>Identity is applied at the end</li>
+            <li>Project ends at construction</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-forest-700 bg-forest-700 p-8 text-cream">
+          <div class="eyebrow mb-4 text-copper-200">Now City Labs</div>
+          <ul class="space-y-3 text-cream/90">
+            <li>Land and systems determine the plan</li>
+            <li>Integrated system flows reduce cap-ex and op-ex</li>
+            <li>Alignment is built in early</li>
+            <li>Identity emerges through systems, materials, and landscape</li>
+            <li>We design for long-term performance and stewardship</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement framework -->
+  <section class="bg-cream-50 py-20">
+    <div class="container-wide">
+      <div class="mb-12 max-w-3xl">
+        <div class="eyebrow mb-4">Engagement framework</div>
+        <h2 class="text-display-md font-display text-forest-700">Four phases. Clear fees. Earned together.</h2>
+        <p class="prose-body mt-6">
+          Each phase has a defined output, measurable value, and a fee
+          logic that aligns our incentive with yours. We only move to the
+          next phase when the work we've already done warrants it.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        {phases.map((p) => (
+          <article class="rounded-2xl border border-forest-700/10 bg-white p-8 md:p-10">
+            <div class="grid gap-8 md:grid-cols-12">
+              <div class="md:col-span-3">
+                <div class="font-display text-5xl text-copper-400">{p.number}</div>
+                <div class="mt-3 font-display text-xl leading-tight text-forest-700">{p.title}</div>
+              </div>
+              <div class="md:col-span-9">
+                <p class="prose-body">{p.blurb}</p>
+                <dl class="mt-6 grid gap-5 md:grid-cols-3">
+                  <div>
+                    <dt class="eyebrow">Output</dt>
+                    <dd class="mt-2 text-sm text-stone-700">{p.output}</dd>
+                  </div>
+                  <div>
+                    <dt class="eyebrow">Value</dt>
+                    <dd class="mt-2 text-sm text-stone-700">{p.value}</dd>
+                  </div>
+                  <div>
+                    <dt class="eyebrow">Fee</dt>
+                    <dd class="mt-2 text-sm text-stone-700">{p.fee}</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Who we serve -->
+  <section class="py-20">
+    <div class="container-wide grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <div class="eyebrow mb-4">Who we serve</div>
+        <h2 class="text-display-md font-display text-forest-700">
+          Landholders with sites large enough to become neighborhoods.
+        </h2>
+      </div>
+      <div class="md:col-span-7">
+        <p class="prose-body">
+          Family holdings, institutional campuses, waterfront reuse,
+          edge-urban sites, multi-parcel assemblages. You have the land.
+          We provide the pathway.
+        </p>
+        <p class="prose-body mt-5">
+          If your goal is a single building or a simple subdivision, you
+          might want a different partner. If your goal is a place with
+          meaning, resilience, and long-term value — we should talk.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / gateway call -->
+  <section id="contact" class="bg-forest-700 py-24 text-cream">
+    <div class="container-narrow">
+      <div class="eyebrow mb-4 text-copper-200">Ready to explore your site's potential?</div>
+      <h2 class="text-display-lg font-display text-cream">Schedule a 30-minute gateway call.</h2>
+      <p class="mt-6 text-lg leading-relaxed text-cream/85">
+        In half an hour we'll review your site context, share our
+        place-scale opportunity framework, and identify whether your
+        project qualifies for the next phase.
+      </p>
+      <p class="mt-4 text-lg leading-relaxed text-cream/85">
+        We take on a select number of engagements each quarter to ensure
+        quality and alignment.
+      </p>
+      <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+        <a href="mailto:hello@nowcitylabs.com?subject=Gateway%20call%20request" class="inline-flex items-center justify-center gap-2 rounded-full bg-cream px-6 py-3 text-sm font-medium text-forest-700 no-underline transition-colors hover:bg-copper-100 hover:text-forest-800">
+          hello@nowcitylabs.com
+        </a>
+        <a href="/outcomes/" class="inline-flex items-center justify-center gap-2 rounded-full border border-cream/40 px-6 py-3 text-sm font-medium text-cream no-underline transition-colors hover:bg-cream/10">
+          Compare outcomes first
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

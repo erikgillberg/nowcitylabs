@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import OutcomesComparison from '../components/OutcomesComparison.tsx';
+---
+
+<Layout title="Outcomes" description="The Now City Neighborhood benchmark vs. a traditional equivalent across six v1 metrics: ROI, timeline, cost of capital, carbon, economic development, and resilience.">
+  <section class="pt-20 pb-12 md:pt-28">
+    <div class="container-wide">
+      <div class="max-w-3xl">
+        <div class="eyebrow mb-6">Outcomes</div>
+        <h1 class="text-display-xl font-display text-forest-700">
+          Better projects. Better capital. Better outcomes.
+        </h1>
+        <p class="lede mt-8 text-stone-700">
+          Regenerative development isn't a claim — it's a measurable
+          difference across the dimensions that actually matter to
+          landowners, operators, cities, and capital.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-20">
+    <div class="container-wide">
+      <OutcomesComparison client:load />
+    </div>
+  </section>
+
+  <!-- Methodology + honesty note -->
+  <section class="border-t border-forest-700/10 bg-cream-50 py-20">
+    <div class="container-wide grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <div class="eyebrow mb-4">On the numbers</div>
+        <h2 class="text-display-md font-display text-forest-700">
+          We'd rather be precise than impressive.
+        </h2>
+      </div>
+      <div class="md:col-span-7">
+        <p class="prose-body">
+          The ranges above are v1 directional claims, grounded in
+          comparable-project benchmarks and internal modeling of the Now
+          City Stack. They are honest approximations — not marketing
+          inflation.
+        </p>
+        <p class="prose-body mt-5">
+          As we close and operate additional projects, every metric will
+          be anchored to primary-source data: NCREIF benchmarks for
+          financial performance, full LCA reports for carbon, third-party
+          audits for resilience tiering, and BLS/local-multiplier analysis
+          for economic-development claims.
+        </p>
+        <p class="prose-body mt-5">
+          If you're evaluating a specific site, we'll run this comparison
+          against your actual land, capital stack, and program — not the
+          benchmark. That's the gateway call.
+        </p>
+        <div class="mt-8">
+          <a href="/services/#contact" class="btn-primary">Schedule a gateway call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
