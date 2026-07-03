@@ -1,0 +1,4 @@
+# nowcitylabs.com has been folded into nowcity.co as the Services section.
+# Permanent redirect of every path to the corporate parent home.
+# Cloudflare Pages evaluates this file before serving static assets.
+/*    https://nowcity.co/    301
